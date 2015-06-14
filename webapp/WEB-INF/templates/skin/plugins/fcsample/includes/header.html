@@ -1,0 +1,31 @@
+    <div id="banner" class="row-fluid"  style="color: #11ABC5">
+        <div class="col-md-1"></div>
+        <div class="col-md-7">
+            <h2 style="color: white">GUICHET DES PARISIENS</h2>
+        </div>
+        <div class="col-md-4">
+            <#if user??>
+            <span class="col-md-8" style="color:white">Merci de vous être identifié, ${user}<br/>
+                <button class="btn btn-default" onclick="window.location = '/logout'">Se déconnecter</button>
+            </span>
+            <#else>
+            <div class="col-md-8 connect">
+                <span>Identifiez-vous avec FranceConnect :</span>
+                <br/>
+                <a id="fc_login" class="btn btn-large" rel="group" href="/login_org">
+                    <img src="images/local/skin/plugins/fcsample/logoFC.png" alt="connexion avec FranceConnect"/>
+                </a>
+            </div>
+            </#if>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    var screenTabletWith = 767;
+    $('#fc_login').click(function(event) {
+        if ($(window).width() > screenTabletWith) {
+            event.preventDefault();
+            OpenPopupCenter(this.href, "FranceConnect_Identification", 500, 600);
+        }
+    });
+</script>

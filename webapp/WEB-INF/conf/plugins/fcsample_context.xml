@@ -4,5 +4,30 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" >
 
+    <bean id="fcsample.dataClientUser" class="fr.paris.lutece.plugins.fcsample.dataclient.UserDataClient">
+        <property name="name" value="user" />
+        <property name="dataServerUri" value="https://fcp.integ01.dev-franceconnect.fr/api/v1/userinfo"/>
+        <property name="tokenMethod" value="HEADER"/>
+        <property name="scope">
+            <set value-type="java.lang.String">
+                <value>openid</value>
+                <value>profile</value>
+                <value>email</value>
+                <value>address</value>
+                <value>phone</value>
+            </set>
+        </property>
+    </bean>
+
+    <bean id="fcsample.dataClientRevenu" class="fr.paris.lutece.plugins.fcsample.dataclient.RevenuDataClient">
+        <property name="name" value="revenu" />
+        <property name="dataServerUri" value="https://fcp.integ01.dev-franceconnect.fr/api/v1/userinfo"/>
+        <property name="tokenMethod" value="HEADER"/>
+        <property name="scope">
+            <set value-type="java.lang.String">
+                <value>revenu_fiscal_de_reference</value>
+            </set>
+        </property>
+    </bean>
 
 </beans>
