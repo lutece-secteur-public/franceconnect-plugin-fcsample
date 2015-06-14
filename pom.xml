@@ -42,4 +42,11 @@
         <jiraProjectName>FCSAMPLE</jiraProjectName>
         <jiraComponentId></jiraComponentId>
     </properties>
+    
+    <scm>
+        <connection>scm:git:https://github.com/mairie-de-paris/plugin-fcsample.git</connection>
+        <developerConnection>scm:git:https://github.com/mairie-de-paris/plugin-fcsample.git</developerConnection>
+        <url>https://github.com/mairie-de-paris/plugin-fcsample.git</url>
+    </scm>
+    
 </project>
