@@ -37,6 +37,7 @@ import fr.paris.lutece.plugins.fcsample.service.RedirectUtils;
 import fr.paris.lutece.plugins.fcsample.web.FranceConnectSampleApp;
 import fr.paris.lutece.plugins.franceconnect.oidc.Token;
 import fr.paris.lutece.plugins.franceconnect.oidc.dataclient.AbstractDataClient;
+import fr.paris.lutece.plugins.franceconnect.service.MapperService;
 import fr.paris.lutece.portal.service.util.AppLogService;
 
 import java.io.IOException;
@@ -50,11 +51,16 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class RevenuDataClient extends AbstractDataClient
 {
+
+    public static final String ATTRIBUTE_USERREVENU = "fcsample-dc-userrevenu";
+
     @Override
     public void handleToken( Token token, HttpServletRequest request, HttpServletResponse response )
     {
         try
         {
+            UserRevenu userRevenu = MapperService.parse( getData( token ), UserRevenu.class );
+            request.getSession( true ).setAttribute( ATTRIBUTE_USERREVENU, userRevenu );
             String strRedirectUrl = RedirectUtils.getViewUrl( request, FranceConnectSampleApp.VIEW_DEMARCHE_ETAPE2 );
             response.sendRedirect( strRedirectUrl );
         }

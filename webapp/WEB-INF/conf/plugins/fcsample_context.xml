@@ -21,11 +21,11 @@
 
     <bean id="fcsample.dataClientRevenu" class="fr.paris.lutece.plugins.fcsample.dataclient.RevenuDataClient">
         <property name="name" value="revenu" />
-        <property name="dataServerUri" value="https://fcp.integ01.dev-franceconnect.fr/api/v1/userinfo"/>
+        <property name="dataServerUri" value="https://datafranceconnect.opendatasoft.com/api/records/1.0/search?dataset=dgfip_rfr"/>
         <property name="tokenMethod" value="HEADER"/>
         <property name="scope">
             <set value-type="java.lang.String">
-                <value>revenu_fiscal_de_reference</value>
+                <value>ods_dgfip_rfr</value>
             </set>
         </property>
     </bean>

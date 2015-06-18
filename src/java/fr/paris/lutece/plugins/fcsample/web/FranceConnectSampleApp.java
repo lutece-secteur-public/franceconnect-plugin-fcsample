@@ -34,7 +34,9 @@
 package fr.paris.lutece.plugins.fcsample.web;
 
 import fr.paris.lutece.plugins.fcsample.business.FormData;
+import fr.paris.lutece.plugins.fcsample.dataclient.RevenuDataClient;
 import fr.paris.lutece.plugins.fcsample.dataclient.UserDataClient;
+import fr.paris.lutece.plugins.fcsample.dataclient.UserRevenu;
 import fr.paris.lutece.plugins.fcsample.service.RedirectUtils;
 import fr.paris.lutece.plugins.franceconnect.oidc.UserInfo;
 import fr.paris.lutece.plugins.franceconnect.service.DataClientService;
@@ -73,10 +75,12 @@ public class FranceConnectSampleApp extends MVCApplication
     private static final String MARK_LASTNAME = "lastname";
     private static final String MARK_FIRSTNAME = "firstname";
     private static final String MARK_FORM_DATA = "form";
+    private static final String MARK_MONTANT = "montant";
     private static final String DATACLIENT_USER = "user";
     private static final String DATACLIENT_REVENU = "revenu";
     private static final long serialVersionUID = 1L;
     private UserInfo _userInfo;
+    private UserRevenu _userRevenu;
     private FormData _formData;
 
     /**
@@ -164,6 +168,8 @@ public class FranceConnectSampleApp extends MVCApplication
     {
         Map<String, Object> model = getModel(  );
         model.put( MARK_FORM_DATA, _formData );
+        _userRevenu = (UserRevenu) request.getSession(  ).getAttribute( RevenuDataClient.ATTRIBUTE_USERREVENU );
+        model.put( MARK_MONTANT, _userRevenu.getRFR() );
 
         return getXPage( TEMPLATE_DEMARCHE_ETAPE2, request.getLocale(  ), model );
     }
