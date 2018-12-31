@@ -1,24 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document>
     <properties>
-        <title>Plugin fcsample</title>
+        <title>Plugin FC sample</title>
     </properties>
     <body>
-        <section name="Plugin fcsample">
-            <!--
+        <section name="Plugin FC sample">
             <p>
-                <img src="images/fcsample.png" />
+                <img src="images/fc.png" />
             </p>
-            -->
-            <subsection name="Introduction">
-                <p></p>
-            </subsection>
-            <subsection name="Configuration">
-                <p></p>
-            </subsection>
-            <subsection name="Usage">
-                <p></p>
-            </subsection>
+            <subdivision name = "Introduction">
+                <p> Ce plug-in est une version LUTECE de l'exemple de démonstration d'un fournisseur de services FranceConnect fourni à l'origine pour nodeJS. </p>
+                <p> La démo originale est disponible sur https://partenaires.franceconnect.gouv.fr/code-fs </p>
+            </subdivision>
+            <subdivision name = "Installer">
+                <p>
+                    Pour construire une webapp contenant le plugin, exécutez:
+                </p>
+                <pre>
+mvn lutece:exploded
+                </pre>
+            </subdivision>
+            <subdivision name = "Configuration">
+                <p> Configurez les points de terminaison (endpoints) et les jetons dans le <code> franceconnect_context.xml </code> </p>
+                <p> Pour plus de détails, voir la <a href="https://github.com/lutece-secteur-public/franceconnect-plugin-franceconnect" target="_blank"> documentation du plugin FranceConnect </a> </p >
+            </subdivision>
+            <subdivision nom = "Utilisation">
+                <p> Lancez l'application Web, activez le plug-in si ce n'est pas le cas et accédez à l'URL suivante: </p>
+                <pre>
+http://myhost/jsp/site/Portal.jsp?page=fcsample
+                </pre>
+            </subdivision>        
         </section>
     </body>
 </document>

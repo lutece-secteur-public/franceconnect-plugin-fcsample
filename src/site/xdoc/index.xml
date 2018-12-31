@@ -1,23 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document>
     <properties>
-        <title>Plugin fcsample</title>
+        <title>Plugin FC sample</title>
     </properties>
     <body>
         <section name="Plugin fcsample">
-            <!--
             <p>
-                <img src="images/fcsample.png" />
+                <img src="images/fc.png" />
             </p>
-            -->
             <subsection name="Introduction">
-                <p></p>
+                <p>This plugin is a LUTECE version of a FranceConnect Service Provider's demo sample originally provided for nodeJS.</p>
+                <p>The original demo can be found at https://partenaires.franceconnect.gouv.fr/code-fs</p>
+            </subsection>
+            <subsection name="Install">
+                <p>
+                    To build a webapp containing the plugin, run :
+                </p>
+                <pre>
+mvn lutece:exploded                    
+                </pre>
             </subsection>
             <subsection name="Configuration">
-                <p></p>
+                <p>Configure endpoints and tokens into the <code>franceconnect_context.xml</code></p>
+                <p>For more details, see the <a href="https://github.com/lutece-secteur-public/franceconnect-plugin-franceconnect" target="_blank">FranceConnect Plugin documentation</a></p>
             </subsection>
             <subsection name="Usage">
-                <p></p>
+                <p>Run the webapp, activate the plugin if not, and got to the following URL :</p>
+                <pre>
+http://myhost/jsp/site/Portal.jsp?page=fcsample                    
+                </pre>
             </subsection>
         </section>
     </body>

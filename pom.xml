@@ -3,7 +3,7 @@
     <parent>
         <artifactId>lutece-global-pom</artifactId>
         <groupId>fr.paris.lutece.tools</groupId>
-        <version>3.0.11</version>
+        <version>4.0.6</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -44,9 +44,9 @@
     </properties>
     
     <scm>
-        <connection>scm:git:https://github.com/mairie-de-paris/plugin-fcsample.git</connection>
-        <developerConnection>scm:git:https://github.com/mairie-de-paris/plugin-fcsample.git</developerConnection>
-        <url>https://github.com/mairie-de-paris/plugin-fcsample.git</url>
+        <connection>scm:git:https://github.com/lutece-secteur-public/franceconnect-plugin-fcsample.git</connection>
+        <developerConnection>scm:git:https://github.com/lutece-secteur-public/franceconnect-plugin-fcsample.git</developerConnection>
+        <url>https://github.com/lutece-secteur-public/franceconnect-plugin-fcsample.git</url>
     </scm>
     
 </project>
