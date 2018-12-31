@@ -10,7 +10,7 @@
     <groupId>fr.paris.lutece.plugins</groupId>
     <artifactId>plugin-fcsample</artifactId>
     <packaging>lutece-plugin</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>Lutece fcsample plugin</name>
 
     <repositories>
@@ -40,13 +40,14 @@
     <properties>
         <componentName>fcsample</componentName>
         <jiraProjectName>FCSAMPLE</jiraProjectName>
-        <jiraComponentId/>
+        <jiraComponentId />
     </properties>
     
     <scm>
         <connection>scm:git:https://github.com/lutece-secteur-public/franceconnect-plugin-fcsample.git</connection>
         <developerConnection>scm:git:https://github.com/lutece-secteur-public/franceconnect-plugin-fcsample.git</developerConnection>
         <url>https://github.com/lutece-secteur-public/franceconnect-plugin-fcsample.git</url>
-    </scm>
+      <tag>franceconnect-plugin-fcsample-1.0.0</tag>
+  </scm>
     
 </project>
